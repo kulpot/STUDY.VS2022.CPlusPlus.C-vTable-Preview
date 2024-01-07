@@ -8,6 +8,8 @@ using namespace std;
 // ------------------------- C++ vTable Preview ----------------------------
 //ref link:https://www.youtube.com/watch?v=aWDBwLzWrVM&list=PLRwVmtr-pp05LyV3bYHwrFacNSNjbUqS6&index=19
 
+//"Static" means at compile time rather than at run time
+
 struct Animal { void makeSound() { cout << "Animallllll" << endl; } };
 
 							// overwrite makeSound
@@ -30,7 +32,7 @@ void main()
 		animal = new Donkey;
 		break;
 	}
-
+	animal->makeSound();
 	delete animal;
 
 	//Cow betsy;
