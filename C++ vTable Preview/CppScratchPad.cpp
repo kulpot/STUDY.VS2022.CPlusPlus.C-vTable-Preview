@@ -10,7 +10,8 @@ using namespace std;
 
 //"Static" means at compile time rather than at run time
 
-struct Animal { void makeSound() { cout << "Animallllll" << endl; } };
+//struct Animal { void makeSound() { cout << "Animallllll" << endl; } };	// not virtual - not for polymorphism
+struct Animal { virtual void makeSound() { cout << "Animallllll" << endl; } };	//  virtual - for polymorphism
 
 							// overwrite makeSound
 struct Cow : public Animal { void makeSound() { cout << "Moooooo" << endl; } };
@@ -19,7 +20,7 @@ struct Donkey : public Animal { void makeSound() { cout << "Hee Haw" << endl; } 
 
 void main()
 {
-	Animal* animal;
+	Animal* animal = NULL;
 	switch (rand() % 3)
 	{
 	case 0:
