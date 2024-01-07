@@ -8,7 +8,21 @@ using namespace std;
 // ------------------------- C++ vTable Preview ----------------------------
 //ref link:https://www.youtube.com/watch?v=aWDBwLzWrVM&list=PLRwVmtr-pp05LyV3bYHwrFacNSNjbUqS6&index=19
 
+struct Animal { void makeSound() { cout << "Animallllll" << endl; } };
 
+struct Cow : public Animal { void makeSound() { cout << "Moooooo" << endl; } };
+struct Pig : public Animal { void makeSound() { cout << "Oink" << endl; } };
+struct Donkey : public Animal { void makeSound() { cout << "Hee Haw" << endl; } };
+
+void main()
+{
+	Cow betsy;
+	betsy.makeSound();
+	Pig wilbur;
+	wilbur.makeSound();
+	Donkey donkey;
+	donkey.makeSound();
+}
 
 
 
