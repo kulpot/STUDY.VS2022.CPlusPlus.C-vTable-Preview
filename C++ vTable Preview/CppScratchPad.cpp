@@ -20,6 +20,7 @@ struct Donkey : public Animal { void makeSound() { cout << "Hee Haw" << endl; } 
 
 void main()
 {
+	Animal* animal;
 	Animal* animal = NULL;
 	switch (rand() % 3)
 	{
