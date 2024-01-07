@@ -21,7 +21,8 @@ struct Donkey : public Animal { void makeSound() { cout << "Hee Haw" << endl; } 
 void main()
 {
 	//Animal* animal;		// Compiler Warning (level 4) C4703
-	Animal* animal(0);
+	
+	Animal* animal(NULL);
 	
 	switch (rand() % 3)
 	{
