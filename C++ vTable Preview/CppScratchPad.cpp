@@ -17,12 +17,28 @@ struct Donkey : public Animal { void makeSound() { cout << "Hee Haw" << endl; } 
 
 void main()
 {
-	Cow betsy;
-	betsy.makeSound();
-	Pig wilbur;
-	wilbur.makeSound();
-	Donkey donkey;
-	donkey.makeSound();
+	Animal* animal;
+	switch (rand() % 3)
+	{
+	case 0:
+		animal = new Cow;
+		break;
+	case 1:
+		animal = new Pig;
+		break;
+	case 2:
+		animal = new Donkey;
+		break;
+	}
+
+	delete animal;
+
+	//Cow betsy;
+	//betsy.makeSound();		// static analysis also called compiletime
+	//Pig wilbur;
+	//wilbur.makeSound();
+	//Donkey donkey;
+	//donkey.makeSound();
 }
 
 
