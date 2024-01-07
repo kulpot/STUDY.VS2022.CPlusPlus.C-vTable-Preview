@@ -10,6 +10,7 @@ using namespace std;
 
 struct Animal { void makeSound() { cout << "Animallllll" << endl; } };
 
+							// overwrite makeSound
 struct Cow : public Animal { void makeSound() { cout << "Moooooo" << endl; } };
 struct Pig : public Animal { void makeSound() { cout << "Oink" << endl; } };
 struct Donkey : public Animal { void makeSound() { cout << "Hee Haw" << endl; } };
