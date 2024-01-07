@@ -2,7 +2,7 @@
 #include <string>
 using std::cout;
 using std::endl;
-using std::string;
+//using std::string;
 using namespace std;
 
 // ------------------------- C++ vTable Preview ----------------------------
@@ -20,8 +20,9 @@ struct Donkey : public Animal { void makeSound() { cout << "Hee Haw" << endl; } 
 
 void main()
 {
-	Animal* animal;
-	Animal* animal = NULL;
+	//Animal* animal;		// Compiler Warning (level 4) C4703
+	Animal* animal(0);
+	
 	switch (rand() % 3)
 	{
 	case 0:
